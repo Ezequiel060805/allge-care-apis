@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(
   rateLimit({
     windowMs: 60_000, // 1 minuto
-    max: 1000,          // máximo 10 peticiones por IP
+    max: 100000,          // máximo 10 peticiones por IP
   })
 );
 
