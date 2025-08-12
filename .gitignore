@@ -1,0 +1,20 @@
+
+# .gitignore
+node_modules/
+.env
+dist/
+*.log
+
+Si es Python, agregá:
+
+__pycache__/
+*.pyc
+.env
+
+Si es .NET:
+
+bin/
+obj/
+*.user
+*.suo
+
