@@ -1,37 +1,27 @@
-#ESTRUCTURA DEL PROYECTO
-project-root/
-├── src/                         # Código fuente
-│   ├── config/                  # Parámetros de configuración
-│   │   ├── db.js                # Pool de conexión a MySQL
-│   │   └── env.js               # Carga de variables de entorno
-│   │
-│   ├── middleware/              # Middlewares genéricos
-│   │   ├── cors.js              # Configuración de CORS
-│   │   ├── rateLimiter.js       # Límite de peticiones
-│   │   └── auth.js              # Verificación de JWT
-│   │
-│   ├── routes/                  # Definición de endpoints
-│   │   ├── auth.js              # /api/auth/register, /api/auth/login
-│   │   └── users.js             # /api/users, /api/users/:id, …
-│   │
-│   ├── controllers/             # Lógica de cada endpoint
-│   │   ├── authController.js    # register(), login(), …
-│   │   └── usersController.js   # getUsers(), createUser(), …
-│   │
-│   ├── models/                  # Acceso a datos (queries, ORM, …)
-│   │   ├── userModel.js         # Funciones CRUD sobre tabla users
-│   │   └── tokenModel.js        # (si guardar tokens, por ejemplo)
-│   │
-│   ├── utils/                   # Funciones auxiliares
-│   │   ├── jwt.js               # Firma/validación de JWT
-│   │   └── errorHandler.js      # Formateo de errores comunes
-│   │
-│   ├── app.js                   # Configura express: middlewares + rutas
-│   └── server.js                # Arranque del servidor (app.listen)
-│
-├── .env                         # Variables privadas
-├── package.json
-└── README.md
+# 🌱 Backend API – Project Allge Care
 
-# Allge-Care-Apis
-# Allge-Care-Apis
+Node.js + Express backend that powers my mobile/web project.  
+It exposes REST endpoints for **users**, **measurements (pH, temperature, light)**, **alerts**, and **configuration**, with a **JWT login**, **MySQL** database, **CORS** enabled, and **rate limiting**.
+
+---
+
+## ✨ Stack
+
+- **Runtime:** Node.js
+- **Framework:** Express
+- **Database:** MySQL (`mysql2/promise`)
+- **Auth:** JSON Web Tokens (`jsonwebtoken`)
+- **Security/UX:** `express-rate-limit`, `cors`, password hashing with **bcrypt**
+- **Env config:** `dotenv`
+
+Entry point: `index.js`
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/Ezequiel060805/allge-care-apis.git
+cd allge-care-apis
+npm install
+
