@@ -240,7 +240,9 @@ app.get('/data/alertas', async (req, res) => {
               ph_valor,
               luz_detectada,
               temperatura
-       FROM alertas`
+       FROM alertas
+       ORDER BY id DESC
+       LIMIT 1`
     );
     const config = rows[0] || null; // Configuración global
     return res.json(config);
